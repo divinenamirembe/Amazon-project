@@ -222,12 +222,14 @@ function renderOrderSummary () {
         element.addEventListener('click', () => {
           const {productId, deliveryOptionId} = element.dataset;
           updateDeliveryOption(productId, deliveryOptionId);
+          renderOrderSummary();
         });
       });
+      
 }
 
 renderOrderSummary();
 
-console.log('Cart:', cart);
-console.log('Products:', products);
-console.log('Delivery Options:', deliveryOptions);
+//console.log('Cart:', cart);
+//console.log('Products:', products);
+//console.log('Delivery Options:', deliveryOptions);
